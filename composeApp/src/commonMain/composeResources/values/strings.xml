@@ -5,32 +5,39 @@
     <string name="stop">Stop</string>
     <string name="theme">Theme</string>
 
-    <string name="feature_1_title">Having trouble setting up a KMP project?</string>
-    <string name="feature_1_subtitle">You are tired of wasting time on trial and error to make the bare minimum app works</string>
+    <string name="feature_1_title">Frustrated by the complexity of Kotlin Multiplatform (KMP) development?</string>
+    <string name="feature_1_subtitle">You spend hours setting up a simple KMP project that barely works.
+Endless searching for suitable libraries is exhausting.
+You dream of having a solid foundation to quickly start your projects.
+Time lost in configuration prevents you from focusing on your unique features.</string>
 
-    <string name="feature_2_title">Exploring the whole internet to find the good libs is not fun</string>
-    <string name="feature_2_subtitle">You would like to have all the state of the art libraries to start building</string>
+    <string name="feature_2_title">Your competitors are getting ahead</string>
+    <string name="feature_2_subtitle">Imagine losing crucial weeks on repetitive tasks while your competitors gain an edge in the market...</string>
 
-    <string name="feature_3_title">Introducing AppKickstarter</string>
-    <string name="feature_3_subtitle">Clone template and immediately start building your unique features around the pre built features we provide</string>
+    <string name="feature_3_title">Introducing AppKickstarter: Your Springboard to Mobile Success!</string>
+    <string name="feature_3_subtitle">Clone our template and immediately start developing your unique features</string>
 
-    <string name="feature_4_title">Onboard your users</string>
-    <string name="feature_4_subtitle">Ready to use onboarding to warmp up your new users</string>
+    <string name="feature_4_title">Ready-to-use onboarding to captivate your new users</string>
+    <string name="feature_4_subtitle"></string>
 
-    <string name="feature_5_title">Authentication</string>
-    <string name="feature_5_subtitle">Setup auth in minutes and start loging your users right now</string>
+    <string name="feature_5_title">Pre-configured authentication: connect your users in minutes</string>
+    <string name="feature_5_subtitle"></string>
 
-    <string name="feature_6_title">Social feed</string>
-    <string name="feature_6_subtitle">Share datas between users</string>
+    <string name="feature_6_title">Integrated social feed to foster user engagement</string>
+    <string name="feature_6_subtitle"></string>
 
-    <string name="feature_7_title">Monetization to make a living now</string>
-    <string name="feature_7_subtitle">Display one of our paywalls and start making a living now</string>
+    <string name="feature_7_title">Quick monetization with our customizable paywalls</string>
+    <string name="feature_7_subtitle"></string>
 
-    <string name="feature_8_title">Gamification to Increase Retention</string>
-    <string name="feature_8_subtitle">Plug your unique features with our gamification module. Increase Retention with Points, Badges and leaderboard.</string>
+    <string name="feature_8_title">Gamification module to boost retention (points, badges, leaderboards)</string>
+    <string name="feature_8_subtitle"></string>
 
-    <string name="feature_9_title">And More...</string>
-    <string name="feature_9_subtitle">- PostHog product analytics and A/B testing to understand users and make experiments \n\n- AI Backend to secure your API keys + multiplatform frontend code to kickstart your next AI wrapper, \n\n- User feedback collection to build user centric products faster and easier, \n\n- Github Actions to streamline your testing and publishing processes, \n\n- Maestro Flows and static analysis tools to make sure the app quality is high, \n\n...</string>
+    <string name="feature_9_title">And that’s not all! AppKickstarter also includes:</string>
+    <string name="feature_9_subtitle">Analytics and A/B testing with PostHog to understand your users.\n
+Secure AI backend + cross-platform frontend code for your AI projects.\n
+Integrated user feedback collection system.\n
+GitHub Actions to automate testing and deployments.\n
+Maestro Flows and static analysis tools to ensure app quality.</string>
 
     <string name="continuee">Continue</string>
 </resources>

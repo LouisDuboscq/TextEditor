@@ -13,14 +13,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.appkickstarter.app.theme.KickstarterTheme
+import com.appkickstarter.app.theme.AppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
  
 @Composable
 fun RoundedButton(
     text: String,
     modifier: Modifier = Modifier,
-    backgroundColor: Color = KickstarterTheme.colors.buttonBackground,
-    contentColor: Color = KickstarterTheme.colors.textOnButton,
+    backgroundColor: Color = AppTheme.colors.buttonBackground,
+    contentColor: Color = AppTheme.colors.textOnButton,
     enabled: Boolean = true,
     onClick: () -> Unit,
 ) {
@@ -38,7 +39,7 @@ fun RoundedButton(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(vertical = 4.dp)
         ) {
-            Text(text, style = KickstarterTheme.typography.button)
+            Text(text, style = AppTheme.typography.button)
         }
     }
 }

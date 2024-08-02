@@ -7,6 +7,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import com.appkickstarter.app.theme.KickstarterTheme
+import com.appkickstarter.app.theme.AppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
  
 @Composable
@@ -14,8 +15,8 @@ fun Heading(
     text: String,
     modifier: Modifier = Modifier,
     textAlign: TextAlign? = null,
-    style: TextStyle = KickstarterTheme.typography.title,
-    color: Color = KickstarterTheme.colors.textOnBackground
+    style: TextStyle = AppTheme.typography.title,
+    color: Color = AppTheme.colors.textOnBackground
 ) {
     Text(
         text,

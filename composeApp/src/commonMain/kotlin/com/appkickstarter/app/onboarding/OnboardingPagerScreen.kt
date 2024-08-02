@@ -20,12 +20,10 @@ import androidx.compose.ui.unit.dp
 import appkickstarter.composeapp.generated.resources.*
 import appkickstarter.composeapp.generated.resources.Res
 import appkickstarter.composeapp.generated.resources.ic_cyclone
-import appkickstarter.composeapp.generated.resources.run
-import appkickstarter.composeapp.generated.resources.stop
 import com.appkickstarter.app.designsystem.Heading
 import com.appkickstarter.app.designsystem.RoundedButton
 import com.appkickstarter.app.designsystem.SimpleLabel
-import com.appkickstarter.app.theme.KickstarterTheme 
+import com.appkickstarter.app.theme.AppTheme
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
@@ -142,8 +140,8 @@ fun OnboardingScreenContent(
                 .fillMaxWidth()
                 .wrapContentWidth(Alignment.CenterHorizontally)
                 .padding(vertical = 16.dp),
-            activeColor = KickstarterTheme.colors.bottomBarIndicatorColor,
-            inactiveColor = KickstarterTheme.colors.bottomBarIndicatorColor,
+            activeColor = AppTheme.colors.activeIndicator,
+            inactiveColor = AppTheme.colors.inactiveIndicator,
         )
 
         RoundedButton(
@@ -157,8 +155,8 @@ fun OnboardingScreenContent(
                     requestContinue()
                 }
             },
-            backgroundColor = KickstarterTheme.colors.buttonBackground,
-            contentColor = KickstarterTheme.colors.textOnButton,
+            backgroundColor = AppTheme.colors.buttonBackground,
+            contentColor = AppTheme.colors.textOnButton,
             modifier = Modifier.padding(start = 16.dp, end = 16.dp,bottom = 48.dp)
         )
         Spacer(Modifier.height(8.dp))
