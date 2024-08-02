@@ -3,10 +3,7 @@ package com.appkickstarter.app.onboarding
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.foundation.shape.CircleShape 
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Text
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -16,8 +13,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
@@ -27,6 +22,9 @@ import appkickstarter.composeapp.generated.resources.Res
 import appkickstarter.composeapp.generated.resources.ic_cyclone
 import appkickstarter.composeapp.generated.resources.run
 import appkickstarter.composeapp.generated.resources.stop
+import com.appkickstarter.app.designsystem.Heading
+import com.appkickstarter.app.designsystem.RoundedButton
+import com.appkickstarter.app.designsystem.SimpleLabel
 import com.appkickstarter.app.theme.KickstarterTheme 
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.DrawableResource
@@ -237,54 +235,7 @@ internal fun OnboardingSwipeUniquePage(
     }
 }
  
-@Composable
-fun RoundedButton(
-    onClick: () -> Unit,
-    backgroundColor: Color,
-    contentColor: Color = Color.White,
-    text: String,
-    enabled: Boolean = true,
-    modifier: Modifier
-) {
-    Button(
-        onClick = onClick,
-        modifier = modifier.fillMaxWidth(),
-        colors = ButtonDefaults.buttonColors(
-            containerColor = backgroundColor,
-            contentColor = contentColor,
-        ),
-        enabled = enabled
-    ) {
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.padding(vertical = 4.dp)
-        ) {
-            Text(text, style = KickstarterTheme.typography.button)
-        }
-    }
-}
 
-@Composable
- fun SimpleLabel(
-    text: String,
-    modifier: Modifier = Modifier,
-    textAlign: TextAlign? = null,
-    color: Color = KickstarterTheme.colors.textOnBackground,
-    bold: Boolean = false
-) {
-    Text(
-        text,
-        modifier = modifier,
-        color = color,
-        style = KickstarterTheme.typography.label.copy(
-            fontWeight = if (bold) FontWeight.Bold else FontWeight.Normal
-        ),
-        textAlign = textAlign
-    )
-}
-
- 
 @Composable
  fun HorizontalPagerIndicator(
     pagerState: androidx.compose.foundation.pager.PagerState,
@@ -386,22 +337,6 @@ fun RoundedButton(
     }
 }
 
-@Composable
-fun Heading(
-    text: String,
-    modifier: Modifier = Modifier,
-    textAlign: TextAlign? = null,
-    style: TextStyle = KickstarterTheme.typography.title,
-    color: Color = KickstarterTheme.colors.textOnBackground
-) {
-    Text(
-        text,
-        modifier = modifier,
-        color = color,
-        style = style,
-        textAlign = textAlign
-    )
-}
 
  interface PagerStateBridge {
     val currentPage: Int
