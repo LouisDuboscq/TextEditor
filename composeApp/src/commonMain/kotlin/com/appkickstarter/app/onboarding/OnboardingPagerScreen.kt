@@ -43,57 +43,62 @@ fun OnboardingScreenContent(
     requestContinue: () -> Unit
 ) {
     val allSwipeDatas = listOf(
-      /*  OnboardingSwipeUniquePageData(
-            imageId = SharedRes.images.busy,
-            titleText = stringResource(SharedRes.strings.hard_find_balance_busy_life),
-            subtitleText = stringResource(SharedRes.strings.hard_find_balance_busy_life_subtitle),
-            buttonText = "Yes",
-            lottie = "presence",
-            bgColor = Color(0XFFB0E0E6)
-        ),
-        OnboardingSwipeUniquePageData(
-            imageId = SharedRes.images.struggling,
-            titleText = stringResource(SharedRes.strings.struggling_with_wellness),
-            subtitleText = stringResource(SharedRes.strings.struggling_with_wellness_subtitle),
-            buttonText = "Yes!",
-            lottie = "capture",
-            bgColor = Color(0XFFAEC6CF)
-        ),
+           OnboardingSwipeUniquePageData(
+               imageId = Res.drawable.ic_cyclone,
+               titleText = Res.string.feature_1_title,
+               subtitleText = Res.string.feature_1_subtitle,
+               bgColor = Color(0XFFFFDAB9)
+           ),
+           OnboardingSwipeUniquePageData(
+               imageId = Res.drawable.ic_cyclone,
+               titleText = Res.string.feature_2_title,
+               subtitleText = Res.string.feature_2_subtitle,
+               bgColor = Color(0XFFFFDAB9)
+           ),
+           OnboardingSwipeUniquePageData(
+               imageId = Res.drawable.ic_cyclone,
+               titleText = Res.string.feature_3_title,
+               subtitleText = Res.string.feature_3_subtitle,
+               bgColor = Color(0XFFFFDAB9)
+           ),
+           OnboardingSwipeUniquePageData(
+               imageId = Res.drawable.ic_cyclone,
+               titleText = Res.string.feature_4_title,
+               subtitleText = Res.string.feature_4_subtitle,
+               bgColor = Color(0XFFFFDAB9)
+           ),
+           OnboardingSwipeUniquePageData(
+               imageId = Res.drawable.ic_cyclone,
+               titleText = Res.string.feature_5_title,
+               subtitleText = Res.string.feature_5_subtitle,
+               bgColor = Color(0XFFFFDAB9)
+           ),
+           OnboardingSwipeUniquePageData(
+               imageId = Res.drawable.ic_cyclone,
+               titleText = Res.string.feature_6_title,
+               subtitleText = Res.string.feature_6_subtitle,
+               bgColor = Color(0XFFFFDAB9)
+           ),
+           OnboardingSwipeUniquePageData(
+               imageId = Res.drawable.ic_cyclone,
+               titleText = Res.string.feature_7_title,
+               subtitleText = Res.string.feature_7_subtitle,
+               bgColor = Color(0XFFFFDAB9)
+           ),
+           OnboardingSwipeUniquePageData(
+               imageId = Res.drawable.ic_cyclone,
+               titleText = Res.string.feature_8_title,
+               subtitleText = Res.string.feature_8_subtitle,
+               bgColor = Color(0XFFFFDAB9)
+           ),
+    OnboardingSwipeUniquePageData(
+        imageId = Res.drawable.ic_cyclone,
+        titleText = Res.string.feature_9_title,
+        subtitleText = Res.string.feature_9_subtitle,
+        bgColor = Color(0XFFFFDAB9)
+    )
+       )
 
-        OnboardingSwipeUniquePageData(
-            imageId = SharedRes.images.achieve_wellness,
-            titleText = stringResource(SharedRes.strings.achieve_balanced_routine),
-            subtitleText = stringResource(SharedRes.strings.achieve_balanced_routine_subtitle),
-            buttonText = "Exactly",
-            lottie = "capture",
-            bgColor = Color(0XFFFFC0CB)
-        ),
-        OnboardingSwipeUniquePageData(
-            imageId = SharedRes.images.benefits_people,
-            titleText = stringResource(SharedRes.strings.unlock_benefits),
-            subtitleText = stringResource(SharedRes.strings.unlock_benefits_subtitle),
-            buttonText = "Start",
-            lottie = "ai",
-            bgColor = Color(0XFFFFDAB9)
-        ),
-        */
-        OnboardingSwipeUniquePageData(
-            imageId = Res.drawable.ic_cyclone,
-            titleText = Res.string.run,
-            subtitleText = Res.string.stop,
-            buttonText = Res.string.cyclone,
-            lottie = null,
-            bgColor = Color(0XFFFFDAB9)
-        ),
-        OnboardingSwipeUniquePageData(
-            imageId = Res.drawable.ic_dark_mode,
-            titleText = Res.string.cyclone,
-            subtitleText = Res.string.run,
-            buttonText = Res.string.stop,
-            lottie = null,
-            bgColor = Color(0XFFAEC6CF)
-        )
-    ) 
     
     val pagerState = rememberPagerState { allSwipeDatas.size }
     val scope = rememberCoroutineScope()
@@ -103,7 +108,6 @@ fun OnboardingScreenContent(
             .fillMaxSize()
             .background(allSwipeDatas[pagerState.currentPage].bgColor)
     ) {
-
         androidx.compose.foundation.pager.HorizontalPager(
             state = pagerState,
             modifier = Modifier
@@ -128,15 +132,7 @@ fun OnboardingScreenContent(
                         }
                     }
             ) {
-                OnboardingSwipeUniquePage(allSwipeDatas[page]) {
-                    if (pagerState.currentPage + 1 < pagerState.pageCount) {
-                        scope.launch {
-                            pagerState.animateScrollToPage(pagerState.currentPage + 1)
-                        }
-                    } else {
-                        requestContinue()
-                    }
-                }
+                OnboardingSwipeUniquePage(allSwipeDatas[page])
             }
         }
 
@@ -151,7 +147,7 @@ fun OnboardingScreenContent(
         )
 
         RoundedButton(
-            text = "yo",
+            text = stringResource(Res.string.continuee),
             onClick = {
                 if (pagerState.currentPage + 1 < pagerState.pageCount) {
                     scope.launch {
@@ -173,16 +169,11 @@ data class OnboardingSwipeUniquePageData(
     val imageId: DrawableResource,
     val titleText: StringResource,
     val subtitleText: StringResource,
-    val buttonText: StringResource,
-    val lottie: String?,
     val bgColor: Color
 )
 
 @Composable
-internal fun OnboardingSwipeUniquePage(
-    data: OnboardingSwipeUniquePageData,
-    next: () -> Unit,
-) {
+internal fun OnboardingSwipeUniquePage(data: OnboardingSwipeUniquePageData) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -222,16 +213,6 @@ internal fun OnboardingSwipeUniquePage(
         )
 
         Spacer(Modifier.weight(1f))
-        /*
-                RoundedButton(
-                    text = data.buttonText,
-                    onClick = next,
-                    backgroundColor = KickstarterTheme.colors.textOnBackground,
-                    contentColor = KickstarterTheme.colors.background,
-                    modifier = Modifier.padding(horizontal = 16.dp)
-                )
-
-         */
     }
 }
  
@@ -336,7 +317,6 @@ internal fun OnboardingSwipeUniquePage(
         )
     }
 }
-
 
  interface PagerStateBridge {
     val currentPage: Int

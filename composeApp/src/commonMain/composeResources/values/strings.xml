@@ -4,4 +4,33 @@
     <string name="run">Run</string>
     <string name="stop">Stop</string>
     <string name="theme">Theme</string>
+
+    <string name="feature_1_title">Having trouble setting up a KMP project?</string>
+    <string name="feature_1_subtitle">You are tired of wasting time on trial and error to make the bare minimum app works</string>
+
+    <string name="feature_2_title">Exploring the whole internet to find the good libs is not fun</string>
+    <string name="feature_2_subtitle">You would like to have all the state of the art libraries to start building</string>
+
+    <string name="feature_3_title">Introducing AppKickstarter</string>
+    <string name="feature_3_subtitle">Clone template and immediately start building your unique features around the pre built features we provide</string>
+
+    <string name="feature_4_title">Onboard your users</string>
+    <string name="feature_4_subtitle">Ready to use onboarding to warmp up your new users</string>
+
+    <string name="feature_5_title">Authentication</string>
+    <string name="feature_5_subtitle">Setup auth in minutes and start loging your users right now</string>
+
+    <string name="feature_6_title">Social feed</string>
+    <string name="feature_6_subtitle">Share datas between users</string>
+
+    <string name="feature_7_title">Monetization to make a living now</string>
+    <string name="feature_7_subtitle">Display one of our paywalls and start making a living now</string>
+
+    <string name="feature_8_title">Gamification to Increase Retention</string>
+    <string name="feature_8_subtitle">Plug your unique features with our gamification module. Increase Retention with Points, Badges and leaderboard.</string>
+
+    <string name="feature_9_title">And More...</string>
+    <string name="feature_9_subtitle">- PostHog product analytics and A/B testing to understand users and make experiments \n\n- AI Backend to secure your API keys + multiplatform frontend code to kickstart your next AI wrapper, \n\n- User feedback collection to build user centric products faster and easier, \n\n- Github Actions to streamline your testing and publishing processes, \n\n- Maestro Flows and static analysis tools to make sure the app quality is high, \n\n...</string>
+
+    <string name="continuee">Continue</string>
 </resources>

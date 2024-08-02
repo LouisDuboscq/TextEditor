@@ -15,7 +15,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import appkickstarter.composeapp.generated.resources.IndieFlower_Regular
+import appkickstarter.composeapp.generated.resources.PlayfairDisplay_Bold
 import appkickstarter.composeapp.generated.resources.Res.font
+import appkickstarter.composeapp.generated.resources.RobotoCondensed_Light
+import appkickstarter.composeapp.generated.resources.RobotoCondensed_Medium
 import org.jetbrains.compose.resources.Font
 
 @Immutable
@@ -141,31 +144,15 @@ fun KickstarterTheme(
     } 
 
     val fontFactor = 1
-/*
-    val PlayfairDisplayRegular: FontFamily =
-        fontFamilyResource(SharedRes.fonts.PlayfairDisplay.regular)
-    val PlayfairDisplayBold: FontFamily = fontFamilyResource(
-        SharedRes.fonts.PlayfairDisplay.bold,
-    )
-    val LatoBold: FontFamily = fontFamilyResource(SharedRes.fonts.Lato.bold)
-    val LatoRegular: FontFamily = fontFamilyResource(SharedRes.fonts.Lato.regular)
 
-    val InterBold: FontFamily = fontFamilyResource(SharedRes.fonts.Inter.bold)
-    val InterLight: FontFamily = fontFamilyResource(SharedRes.fonts.Inter.light)
-    val InterRegular: FontFamily = fontFamilyResource(SharedRes.fonts.Inter.regular)
-
-    val BangerRegular: FontFamily = fontFamilyResource(SharedRes.fonts.Bangers.regular)
-    val NunitoSemiBold: FontFamily = fontFamilyResource(SharedRes.fonts.Nunito.semiBold)
-    val NunitoExtraBold: FontFamily = fontFamilyResource(SharedRes.fonts.Nunito.extraBold)
-
-    val RobotoCondensedMedium: FontFamily = fontFamilyResource(SharedRes.fonts.RobotoCondensed.medium)
-    val RobotoCondensedLight: FontFamily = fontFamilyResource(SharedRes.fonts.RobotoCondensed.light)
-*/
     val indieFlower = FontFamily(Font(font.IndieFlower_Regular))
+    val PlayfairDisplay_Bold = FontFamily(Font(font.PlayfairDisplay_Bold))
+    val RobotoCondensed_Light = FontFamily(Font(font.RobotoCondensed_Light))
+    val RobotoCondensed_Medium = FontFamily(Font(font.RobotoCondensed_Medium))
     
     val customTypography = CustomTypography(
         title = TextStyle(
-            fontFamily = indieFlower,
+            fontFamily = PlayfairDisplay_Bold,
             fontWeight = FontWeight.Bold,
             fontSize = 32.sp * fontFactor,
             lineHeight = 32.sp * fontFactor,
@@ -173,35 +160,35 @@ fun KickstarterTheme(
             color = KickstarterTheme.colors.textOnBackground,
         ),
         button = TextStyle(
-            fontFamily = indieFlower,
+            fontFamily = RobotoCondensed_Medium,
             fontWeight = FontWeight.SemiBold,
             fontSize = 14.sp * fontFactor,
             lineHeight = 21.sp * fontFactor,
             letterSpacing = 0.sp * fontFactor,
         ),
         textOnCard = TextStyle(
-            fontFamily = indieFlower,
+            fontFamily = RobotoCondensed_Medium,
             fontWeight = FontWeight.ExtraBold,
             fontSize = 19.sp * fontFactor,
             lineHeight = 28.5.sp * fontFactor,
             letterSpacing = 0.sp * fontFactor,
         ),
         tab = TextStyle(
-            fontFamily = indieFlower,
+            fontFamily = RobotoCondensed_Medium,
             fontWeight = FontWeight.SemiBold,
             fontSize = 16.sp * fontFactor,
             lineHeight = 20.sp * fontFactor,
             letterSpacing = 0.sp * fontFactor,
         ),
         label = TextStyle(
-            fontFamily = indieFlower,
+            fontFamily = RobotoCondensed_Medium,
             fontWeight = FontWeight.Medium,
             fontSize = 16.sp * fontFactor,
             lineHeight = 21.sp * fontFactor,
             letterSpacing = 0.sp * fontFactor,
         ),
         subtitle = TextStyle(
-            fontFamily = indieFlower,
+            fontFamily = RobotoCondensed_Light,
             fontWeight = FontWeight.Light,
             fontSize = 12.sp * fontFactor,
             lineHeight = 18.sp * fontFactor,
