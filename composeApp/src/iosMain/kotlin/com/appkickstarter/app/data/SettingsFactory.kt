@@ -1,4 +1,4 @@
-package com.lduboscq.appkickstarter.data
+package com.appkickstarter.app.data
 
 import com.russhwolf.settings.NSUserDefaultsSettings
 import com.russhwolf.settings.ObservableSettings
