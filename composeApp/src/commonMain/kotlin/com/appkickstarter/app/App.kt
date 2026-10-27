@@ -13,13 +13,7 @@ internal fun App() = KickstarterTheme(
     selectedTheme = "default",
     selectedThemeBrightness = "system"
 ) {
-    var showOnboarding by rememberSaveable { mutableStateOf(true) }
-    
-    if (showOnboarding) OnboardingScreenContent {
-        showOnboarding = false
-    } else {
-        Navigator(PersonsListScreen)
-    }
+
 }
 
 @Preview
